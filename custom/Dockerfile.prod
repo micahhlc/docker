@@ -1,0 +1,16 @@
+FROM alpine
+
+# RUN apk add python
+
+CMD ["8.8.8.8"]
+
+ENTRYPOINT [ "ping", "-t", "5" ]
+
+
+# how to build and run
+# docker build -f Dockerfile.prod -t mycustom:1 .
+# docker run -t mycustom:1
+
+# build from github remote as long as it has dockerfile
+# docker build githubpath/abc/abc.git -t imagename
+
